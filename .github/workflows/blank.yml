@@ -6,7 +6,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-      - name: Setup
-        run: echo "Iniciando..."
+      - name: Setup RDP
+        run: |
+          net user runneradmin Senha123!
+          net localgroup administrators runneradmin /add
+          echo "RDP configurado"
