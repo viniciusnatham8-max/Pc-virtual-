@@ -8,7 +8,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Setup RDP
-        run: |
-          net user runneradmin Senha123!
-          net localgroup administrators runneradmin /add
-          echo "RDP configurado"
+  run: |
+    net user runneradmin Senha123!
+    net localgroup administrators runneradmin /add || echo "Já é admin"
