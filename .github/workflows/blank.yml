@@ -1,12 +1,12 @@
 name: Windows RDP
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-      - name: Setup RDP
-        run: |
-          net user runneradmin Senha123!
-          net localgroup administrators runneradmin /add
+      - name: Setup
+        run: echo "Iniciando..."
